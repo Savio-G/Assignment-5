@@ -1,0 +1,19 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.convert-btn{
+    background-color: rgb(29, 170, 225);
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 5px;
+    
+}
+
+.question-container{
+    background-color: lightgreen;
+    color: lightyellow;
+    border: 5px solid brown;
+    margin: 20px;
+    padding: 30px;
+    
+}

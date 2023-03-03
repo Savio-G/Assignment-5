@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Assignment-5</title>
+</head>
+
+<body>
+    <section class="mx-8">
+        <header>
+            <!-- NavBar -->
+            <div class="navbar bg-base-100 bg-cyan-100 px-8">
+                <div class="flex-1 ">
+                    <p><span class="font-semibold text-2xl">Interactive</span> <br><span class="text-gray-300">Geometric
+                            Genious</span></p>
+
+                </div>
+                <div class="flex-none">
+                    <button id="blog" class="btn btn-info">Blog</button>
+                </div>
+            </div>
+        </header>
+        <!-- ---------Header and Navbar end--------------- -->
+
+        <main>
+            <section class="mt-4 flex flex-col md:flex-row lg:flex-row gap-10 ">
+                <div class="cards grid md:grid-cols-2 lg:grid-cols-3 gap-2 w-[75%] shadow-2xl">
+                    <!-- First Card -->
+                    <div onmouseover="changecolor()" class="card w-full bg-base-100 border-2 border-gray-200 rounded-none text-center py-8 random-bg shadow-2xl" >
+                        <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 id="triangle-title" class="card-title mx-auto">Triangle</h2>
+                            <p>Area (A) = 0.5* b* h</p>
+                            <p><input id="b1" class="w-[20%] bg-grey-700 border-2 border-black px-3 mr-2" type="text"
+                                    placeholder="b">cm <input
+                                  id="h1"  class="w-[20%] bg-grey-700 border-2 border-black px-3 mr-2 ml-3" type="text"
+                                    placeholder="h">cm</p>
+                            <div class="card-actions mt-4 ">
+                                <button id="triangle-btn" class="btn btn-primary-500 w-[90%]">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div class="card w-full bg-base-100 border-2 border-gray-200 rounded-none text-center py-8 random-bg2 shadow-2xl">
+                        <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 id="rectangle-title" class="card-title mx-auto">Rectangle</h2>
+                            <p>Area (A) = w * l</p>
+                            <p><input id="w" class="w-[20%] bg-grey-700 border-2 border-black px-3 mr-2" type="text"
+                                    placeholder="w">cm <input
+                                   id="l" class="w-[20%] bg-grey-700 border-2 border-black px-3 mr-2 ml-3" type="text"
+                                    placeholder="l">cm</p>
+                            <div class="card-actions mt-4 ">
+                                <button id="rectangle-btn" class="btn btn-primary-500 w-[90%]">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Card -->
+                    <div class="card w-full bg-base-100 border-2 border-gray-200 rounded-none text-center py-8 random-bg3 shadow-2xl">
+                        <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 id="parallel-title" class="card-title mx-auto">Parallelogram</h2>
+                            <p>Area (A) = b * h</p>
+                            <p>b=10cm, h=12cm</p>
+                            <div class="card-actions mt-4 ">
+                                <button id="parallel-btn" class="btn btn-primary-500 w-[90%]">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fourth Card -->
+
+                    <div class="card w-full bg-base-100 border-2 border-gray-200 rounded-none text-center py-8 random-bg4 shadow-2xl">
+                        <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 id="rhombus-title" class="card-title mx-auto">Rhombus</h2>
+                            <p>Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
+                            <p>d<sub>1</sub>=16cm, d<sub>2</sub>=8cm</p>
+                            <div class="card-actions mt-4 ">
+                                <button id="rhombus-btn" class="btn btn-primary-500 w-[90%]">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fifth Card -->
+
+                    <div class="card w-full bg-base-100 border-2 border-gray-200 rounded-none text-center py-8 random-bg5 shadow-2xl">
+                        <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 id="pentagon-title" class="card-title mx-auto">Pentagon</h2>
+                            <p>Area (A) = 0.5 * p * b</p>
+                            <p>
+                            <p>p=6cm, b=10cm</p>
+                            </p>
+                            <div class="card-actions mt-4 ">
+                                <button id="pentagon-btn" class="btn btn-primary-500 w-[90%]">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Sixth Card -->
+                    <div class="card w-full bg-base-100 border-2 border-gray-200 rounded-none text-center py-8 random-bg6 shadow-2xl">
+                        <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 id="ellipse-title" class="card-title mx-auto">Ellipse</h2>
+                            <p>Area (A) = pie *a*b</p>
+                            <p>
+                            <p>
+                            <p>a=10cm, b=4cm</p>
+                            </p>
+                            </p>
+                            <div class="card-actions mt-4 ">
+                                <button  id="ellipse-btn" class="btn btn-primary-500 w-[90%]">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Flex Time -->
+                <div class="calculation-container  w-full md:w-[30%] lg:w-[30%] ">
+                    <h4 class="underline text-center shadow-2xl">Area Calculation </h4>
+
+                    <div class="overflow-x-auto border-2 bordergray-200 rounded-none h-[30%] shadow-2xl">
+                        <table class="table w-full">
+                          <!-- head -->
+                          <tbody id="t-body">
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+            </section>
+        </main>
+    </section>
+
+
+
+
+
+
+    <!-- JS -->
+    <script src="js/blog.js"></script>
+    <script src="js/calculations.js"></script>
+
+</body>
+
+</html>
